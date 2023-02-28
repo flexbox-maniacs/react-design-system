@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@flex/scripts": "github:flexbox-maniacs/scripts",
-    "@flex/theme-default": "github:flexbox-maniacs/theme-default",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "@flex/scripts": "github:flexbox-maniacs/scripts",
+    "@flex/theme-default": "github:flexbox-maniacs/theme-default"
   },
   "devDependencies": {
     "@types/node": "^18.14.2",
