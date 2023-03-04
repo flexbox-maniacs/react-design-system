@@ -1,0 +1,57 @@
+@import "@size";
+@import "@mixins/hover-effect";
+
+.button {
+  display: inline-flex;
+  padding: 0.7em;
+  background-color: var(--button-background);
+  border: {
+    radius: 6px;
+    width: 1px;
+    color: var(--button-border-color, transparent);
+    style: solid;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    &.fill {
+      --button-background: rgb(var(--primary));
+      --button-color: rgb(var(--body));
+
+      &:hover {
+        --button-background: rgba(var(--primary), 0.7);
+      }
+    }
+
+    &.outlined {
+      --button-border-color: rgb(var(--primary));
+
+      &:hover {
+        --button-background: rgb(var(--primary));
+        --button-color: rgb(var(--body));
+      }
+    }
+  }
+
+  &.transparent {
+    box-shadow: var(--card-shadow);
+
+    &:hover {
+      --button-background: rgb(var(--primary));
+      --button-color: rgb(var(--body));
+    }
+  }
+
+  &.size {
+    &-small {
+      font-size: 0.8em;
+    }
+  }
+
+  > * {
+    color: var(--button-color);
+  }
+}

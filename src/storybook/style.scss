@@ -1,0 +1,10 @@
+.storybook {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: max-content;
+  grid-template-areas:
+    "header header"
+    "sidebar board"
+    "sidebar controlCenter";
+}
