@@ -19,9 +19,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@public": ["public/*"],
-      "@scripts": ["node_modules/scripts/scripts.ts"],
-      "@size": ["node_modules/theme-default/scss/functions/_size.scss"],
-      "@theme": ["node_modules/theme-default/scss/main.scss"],
+      "@scripts": ["node_modules/@flex/scripts/scripts.ts"],
+      "@size": ["node_modules/@flex/theme-default/scss/functions/_size.scss"],
+      "@theme": ["node_modules/@flex/theme-default/scss/main.scss"],
       "@ui": ["src/components/ui/index.ts"],
       "@sections": ["src/components/sections/index.ts"]
     }

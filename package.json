@@ -12,6 +12,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "@flex/scripts": "github:flexbox-maniacs/scripts",
+    "@flex/theme-default": "github:flexbox-maniacs/theme-default",
     "sass": "^1.58.3"
   },
   "devDependencies": {

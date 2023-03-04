@@ -11,18 +11,22 @@ export default defineConfig({
       "@public": path.resolve(__dirname, "public"),
       "@mixins": path.resolve(
         __dirname,
-        "node_modules/theme-default/scss/mixins"
+        "node_modules/@flex/theme-default/scss/mixins"
       ),
-      "@scripts": path.resolve(__dirname, "node_modules/scripts/scripts.ts"),
+      "@scripts": path.resolve(
+        __dirname,
+        "node_modules/@flex/scripts/scripts.ts"
+      ),
       "@size": path.resolve(
         __dirname,
-        "node_modules/theme-default/scss/functions/_size.scss"
+        "node_modules/@flex/theme-default/scss/functions/_size.scss"
       ),
       "@theme": path.resolve(
         __dirname,
-        "node_modules/theme-default/scss/main.scss"
+        "node_modules/@flex/theme-default/scss/main.scss"
       ),
       "@ui": path.resolve(__dirname, "src/components/ui/index.ts"),
+      "@sections": path.resolve(__dirname, "src/components/sections/index.ts"),
     },
   },
 })
