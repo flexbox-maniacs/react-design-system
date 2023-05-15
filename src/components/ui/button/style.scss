@@ -2,6 +2,7 @@
 
 .button {
   display: inline-flex;
+  column-gap: 5px;
   padding: 0.7em;
   background-color: var(--button-background);
   border: {
@@ -36,8 +37,6 @@
   }
 
   &.transparent {
-    box-shadow: var(--card-shadow);
-
     &:hover {
       --button-background: rgb(var(--primary));
       --button-color: rgb(var(--body));

@@ -18,12 +18,13 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "@public": ["public/*"],
+      "@images": ["src/assets/images/*"],
+      "@mixins": ["node_modules/@flex/theme-default/scss/mixins/*"],
       "@scripts": ["node_modules/@flex/scripts/scripts.ts"],
+      "@sections": ["src/components/sections/index.ts"],
       "@size": ["node_modules/@flex/theme-default/scss/functions/_size.scss"],
       "@theme": ["node_modules/@flex/theme-default/scss/main.scss"],
-      "@ui": ["src/components/ui/index.ts"],
-      "@sections": ["src/components/sections/index.ts"]
+      "@ui": ["src/components/ui/index.ts"]
     }
   },
   "include": ["src"],

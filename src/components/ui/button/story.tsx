@@ -1,7 +1,17 @@
 import UiButton from "."
+import { ButtonProps } from "./types"
 
-const ButtonStory = () => {
-  return <UiButton button={{ label: "button", type: "outlined" }} />
+function ButtonStory(defaultProps: ButtonProps): JSX.Element {
+  return (
+    <>
+      <UiButton button={defaultProps} />
+    </>
+  )
 }
 
-export default ButtonStory()
+export const defaults = {
+  label: "button",
+  type: "outlined",
+} as ButtonProps
+
+export default ButtonStory

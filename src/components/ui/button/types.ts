@@ -1,6 +1,6 @@
 import React from "react"
 
-type ButtonProps = {
+export type ButtonProps = {
   label?: string
   startingIcon?: string
   icon?: string

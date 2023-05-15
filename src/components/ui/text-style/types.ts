@@ -1,5 +1,3 @@
-import { ReactNode } from "react"
-
 type TextStyleProps = {
   bold?: boolean
   uppercase?: boolean
@@ -7,5 +5,5 @@ type TextStyleProps = {
 
 export type TextStyleTypes = {
   style: TextStyleProps
-  children: ReactNode
+  children: React.ReactNode
 }

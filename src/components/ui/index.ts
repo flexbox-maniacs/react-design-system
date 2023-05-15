@@ -1,3 +1,7 @@
 export { default as UiButton } from "./button"
 export { default as UiIcon } from "./icon"
+export { default as UiInput } from "./input"
+export { default as UiTable } from "./table"
+export { default as UiTableRow } from "./table/row"
+export { default as UiTableCell } from "./table/cell"
 export { default as UiTextStyle } from "./text-style"
