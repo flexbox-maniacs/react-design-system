@@ -1,10 +1,8 @@
-/* import IconStory from "./icon/story"
-import TextStyleStory from "./ui/text-style/story"
-import IconStory from "./ui/icon/story" */
-import ButtonStory from "./ui/button/story"
-import { defaults as ButtonDefaults } from "./ui/button/story"
+import ButtonStory, { defaults as ButtonDefaults } from "./ui/button/story"
+import IconStory, { defaults as IconDefaults } from "./ui/icon/story"
+import InputStory, { defaults as InputDefaults } from "./ui/input/story"
 
-type PropTypes = { name: string; type: string | Array<string> }
+type PropTypes = { name: string; type: any }
 
 type ComponentProps = { name: string; story: any; defaults: object; propList: Array<PropTypes> }
 
@@ -23,6 +21,26 @@ export const components: componentTypes = [
       { name: "variant", type: ["primary", "transparent"] },
       { name: "type", type: ["outlined", "fill"] },
       { name: "size", type: ["small", "large"] },
+    ],
+  },
+  {
+    name: "Icon",
+    story: IconStory,
+    defaults: IconDefaults,
+    propList: [
+      { name: "name", type: "" },
+      { name: "type", type: ["outlined", "rounded", "sharp"] },
+    ],
+  },
+  {
+    name: "Input",
+    story: InputStory,
+    defaults: InputDefaults,
+    propList: [
+      { name: "name", type: "" },
+      { name: "defaultValue", type: "" },
+      { name: "type", type: "" },
+      { name: "select", type: "" },
     ],
   },
 ]

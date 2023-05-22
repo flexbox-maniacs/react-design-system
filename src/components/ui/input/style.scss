@@ -3,19 +3,21 @@
 .input {
   font-size: 14px;
   appearance: none;
-  border: 1px solid rgb(var(--contrast-2));
+  border: 1px solid rgba(var(--text-color), 0.1);
   background-color: transparent;
   display: flex;
   text-align: left;
   padding: size(8);
   border-radius: calc(var(--radius) / 2);
 
-  &:focus {
+  &:focus:not([type="radio"]) {
     border-color: rgba(var(--primary), 0.5);
   }
 
-  &:checked {
-    &[type="radio"]::before {
+  &[type="radio"]:checked {
+    border-color: rgba(var(--primary), 0.5);
+
+    &::before {
       background-color: rgb(var(--primary));
       width: 10px;
       aspect-ratio: 1;

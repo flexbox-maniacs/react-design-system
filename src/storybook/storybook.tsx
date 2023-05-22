@@ -11,6 +11,7 @@ function Storybook(): JSX.Element {
 
   function updateComponent(index: number) {
     setCurrentComponent(index)
+    changeProps(components[index].defaults as Record<string, string>)
   }
 
   const [defaultProps, changeProps] = useState<Record<string, string>>(
@@ -35,8 +36,12 @@ function Storybook(): JSX.Element {
     <div className="storybook">
       <Header />
       <Sidebar components={components} updateComponent={updateComponent} />
-      <Board component={components[currentComponent].story(defaultProps)} />
-      <ControlCenter propList={components[currentComponent].propList} onChangeForm={updateProps} />
+      <Board component={components[currentComponent].story(defaultProps)} name={components[currentComponent].name} />
+      <ControlCenter
+        propList={components[currentComponent].propList}
+        onChangeForm={updateProps}
+        currentDefaults={components[currentComponent].defaults}
+      />
     </div>
   )
 }

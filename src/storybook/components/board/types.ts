@@ -1,3 +1,4 @@
 export type StorybookBoardTypes = {
-  component?: React.ReactNode
+  name: string
+  component: React.ReactNode
 }

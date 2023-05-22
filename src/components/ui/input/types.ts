@@ -3,8 +3,9 @@ type InputSelectTypes = {
   options: Array<string>
 }
 
-type InputProps = {
+export type InputProps = {
   name?: string
+  defaultValue?: string
   type?: React.HTMLInputTypeAttribute | "select"
   select?: InputSelectTypes
 }

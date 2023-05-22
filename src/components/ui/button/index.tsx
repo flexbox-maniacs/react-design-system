@@ -17,8 +17,13 @@ function UiButton({ button, handleClick }: ButtonTypes): JSX.Element {
 
   return (
     <button className={buttonClass} onClick={handleClick}>
-      {button.icon && <UiIcon icon={{ name: button.icon }} />}
+      {button.startingIcon ? (
+        <UiIcon icon={{ name: button.startingIcon }} />
+      ) : (
+        button.icon && <UiIcon icon={{ name: button.icon }} />
+      )}
       {button.label && <span className="button-label">{button.label}</span>}
+      {button.endingIcon && <UiIcon icon={{ name: button.endingIcon }} />}
     </button>
   )
 }

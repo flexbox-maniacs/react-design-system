@@ -2,13 +2,13 @@ import { UiTable, UiTableRow, UiTableCell, UiInput } from "@ui"
 import { StorybookControlCenterTypes } from "./types"
 import "./style.scss"
 
-function StorybookControlCenter({ propList, onChangeForm }: StorybookControlCenterTypes): JSX.Element {
+function StorybookControlCenter({ propList, onChangeForm, currentDefaults }: StorybookControlCenterTypes): JSX.Element {
   return (
     <aside className="storybook-control-center">
       <form onChange={onChangeForm} className="storybook-control-center-form">
         <UiTable
           table={{
-            headers: ["name", "value"],
+            headers: ["prop", "value"],
           }}>
           <tbody>
             {propList.map((prop) => (
@@ -22,7 +22,8 @@ function StorybookControlCenter({ propList, onChangeForm }: StorybookControlCent
                   <UiInput
                     input={{
                       name: prop.name,
-                      type: Array.isArray(prop.type) ? "select" : "text",
+                      defaultValue: currentDefaults[prop.name as keyof typeof currentDefaults],
+                      type: Array.isArray(prop.type) ? "select" : typeof prop.type,
                       select: Array.isArray(prop.type) ? { name: prop.name, options: prop.type } : undefined,
                     }}
                   />
