@@ -3,20 +3,20 @@ import { UiIcon } from "@ui"
 import { ButtonTypes } from "./types"
 import "./style.scss"
 
-function UiButton({ button, handleClick }: ButtonTypes): JSX.Element {
-  const { variant = "primary", type = "fill" } = button
+function UiButton({ button, className, handleClick }: ButtonTypes): JSX.Element {
+  const { variant = "primary", style = "fill" } = button
   const buttonClassList = {
     size: `size-${button.size}`,
   }
 
   const buttonClass = useClassName(
-    ["button", !(variant === "transparent") ? type : null, variant],
+    [className ?? null, "button", variant != "transparent" ? style : null, variant],
     button,
     buttonClassList
   )
 
   return (
-    <button className={buttonClass} onClick={handleClick}>
+    <button className={buttonClass} onClick={handleClick} type={button.submit ? "submit" : undefined}>
       {button.startingIcon ? (
         <UiIcon icon={{ name: button.startingIcon }} />
       ) : (

@@ -3,9 +3,16 @@ import { StorybookControlCenterTypes } from "./types"
 import "./style.scss"
 
 function StorybookControlCenter({ propList, onChangeForm, currentDefaults }: StorybookControlCenterTypes): JSX.Element {
+  const inputTypes = {
+    string: "text",
+    option: "select",
+    boolean: "switch",
+    number: "number",
+  }
+
   return (
-    <aside className="storybook-control-center">
-      <form onChange={onChangeForm} className="storybook-control-center-form">
+    <aside id="storybook-control-center">
+      <form onChange={onChangeForm} id="storybook-control-center-form">
         <UiTable
           table={{
             headers: ["prop", "value"],
@@ -14,7 +21,7 @@ function StorybookControlCenter({ propList, onChangeForm, currentDefaults }: Sto
             {propList.map((prop) => (
               <UiTableRow key={prop.name}>
                 <UiTableCell>
-                  <label htmlFor={prop.name} className="storybook-control-center-label">
+                  <label htmlFor={prop.name} id="storybook-control-center-label">
                     {prop.name}
                   </label>
                 </UiTableCell>
@@ -23,8 +30,9 @@ function StorybookControlCenter({ propList, onChangeForm, currentDefaults }: Sto
                     input={{
                       name: prop.name,
                       defaultValue: currentDefaults[prop.name as keyof typeof currentDefaults],
-                      type: Array.isArray(prop.type) ? "select" : typeof prop.type,
-                      select: Array.isArray(prop.type) ? { name: prop.name, options: prop.type } : undefined,
+                      type: inputTypes[prop.type as keyof typeof inputTypes],
+                      select: Array.isArray(prop.options) ? { name: prop.name, options: prop.options } : undefined,
+                      placeholder: prop.type,
                     }}
                   />
                 </UiTableCell>

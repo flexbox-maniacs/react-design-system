@@ -1,0 +1,16 @@
+@import "@size";
+
+.card {
+  background-color: rgb(var(--contrast-1));
+  padding: size(6);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  &-header {
+    padding-bottom: size(6);
+
+    &-title + &-subtitle {
+      padding-top: size(16);
+    }
+  }
+}

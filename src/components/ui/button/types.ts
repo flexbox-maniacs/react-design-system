@@ -1,4 +1,4 @@
-import React from "react"
+import { ComponentTypes } from "@component"
 
 export type ButtonProps = {
   label?: string
@@ -6,11 +6,12 @@ export type ButtonProps = {
   icon?: string
   endingIcon?: string
   variant?: "primary" | "transparent"
-  type?: "outlined" | "fill"
+  style?: "outlined" | "fill"
   size?: "small" | "large"
+  submit?: boolean
 }
 
-export type ButtonTypes = {
+export type ButtonTypes = ComponentTypes & {
   button: ButtonProps
   handleClick?: React.MouseEventHandler
 }

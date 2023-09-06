@@ -1,4 +1,5 @@
 export { default as UiButton } from "./button"
+export { default as UiCard } from "./card"
 export { default as UiIcon } from "./icon"
 export { default as UiInput } from "./input"
 export { default as UiTable } from "./table"

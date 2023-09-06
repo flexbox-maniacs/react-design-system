@@ -19,9 +19,9 @@ function StorybookHeader({}: StorybookHeaderTypes): JSX.Element {
   })
 
   return (
-    <header className="storybook-header">
-      <img src={StorybookLogo} alt="storybook logo" className="storybook-header-logo" />
-      <UiButton button={{ icon: icon, size: "small" }} handleClick={themeHandler} />
+    <header id="storybook-header">
+      <img src={StorybookLogo} alt="storybook logo" id="storybook-header-logo" />
+      <UiButton button={{ icon: icon, size: "small", variant: "transparent" }} handleClick={themeHandler} />
     </header>
   )
 }

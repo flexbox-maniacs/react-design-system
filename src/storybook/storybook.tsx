@@ -11,37 +11,42 @@ function Storybook(): JSX.Element {
 
   function updateComponent(index: number) {
     setCurrentComponent(index)
-    changeProps(components[index].defaults as Record<string, string>)
+    changeProps(components[index].defaults)
   }
 
-  const [defaultProps, changeProps] = useState<Record<string, string>>(
-    components[currentComponent].defaults as Record<string, string>
-  )
+  const [defaultProps, changeProps] = useState(components[currentComponent].defaults)
 
   function updateProps(e: React.FormEvent<HTMLFormElement>) {
     const input = e.target as HTMLInputElement
 
-    const props = components[currentComponent].propList.reduce(
-      (acc: Record<string, string>, key: { name: string; type: string | Array<string> }) => {
-        acc[key.name] = input.name === key.name ? input.value : defaultProps[key.name]
-        return acc
-      },
-      {}
-    )
+    const props: Record<string, string | boolean> = { ...components[currentComponent].defaults }
+    props[input.name] = input.value != "on" ? input.value : input.checked
 
     changeProps(props)
   }
 
+  function changeCss(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    const form = e.target as HTMLFormElement
+
+    document.documentElement.setAttribute("style", form.css.value)
+  }
+
   return (
-    <div className="storybook">
+    <div id="storybook">
       <Header />
       <Sidebar components={components} updateComponent={updateComponent} />
-      <Board component={components[currentComponent].story(defaultProps)} name={components[currentComponent].name} />
+      {/* <Board component={components[currentComponent].story(defaultProps)} name={components[currentComponent].name} />
       <ControlCenter
         propList={components[currentComponent].propList}
         onChangeForm={updateProps}
         currentDefaults={components[currentComponent].defaults}
-      />
+      /> */}
+      {/* <form onSubmit={changeCss}>
+        <textarea name="css" id="" cols={30} rows={10}></textarea>
+        <UiButton button={{ label: "submit", submit: true }} />
+      </form> */}
     </div>
   )
 }

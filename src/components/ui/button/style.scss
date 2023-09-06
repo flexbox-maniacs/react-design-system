@@ -18,7 +18,7 @@
 
   &.primary {
     &.fill {
-      --button-background: rgb(var(--primary));
+      --button-background: rgba(var(--primary), 0.9);
       --button-color: rgb(var(--body));
 
       &:hover {
@@ -27,10 +27,10 @@
     }
 
     &.outlined {
-      --button-border-color: rgb(var(--primary));
+      --button-border-color: rgba(var(--primary), 0.9);
 
       &:hover {
-        --button-background: rgb(var(--primary));
+        --button-background: rgb(var(--primary), 0.9);
         --button-color: rgb(var(--body));
       }
     }
@@ -38,7 +38,7 @@
 
   &.transparent {
     &:hover {
-      --button-background: rgb(var(--primary));
+      --button-background: rgba(var(--primary), 0.9);
       --button-color: rgb(var(--body));
     }
   }
@@ -46,6 +46,10 @@
   &.size {
     &-small {
       font-size: 0.8em;
+    }
+
+    &-large {
+      font-size: 1.2em;
     }
   }
 

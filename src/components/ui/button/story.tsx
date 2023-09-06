@@ -7,7 +7,7 @@ function ButtonStory(defaultProps: ButtonProps): JSX.Element {
 
 export const defaults = {
   label: "button",
-  type: "outlined",
+  style: "outlined",
 } as ButtonProps
 
 export default ButtonStory

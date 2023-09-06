@@ -1,3 +1,5 @@
+import { ComponentTypes } from "@component"
+
 type InputSelectTypes = {
   name: string
   options: Array<string>
@@ -6,10 +8,11 @@ type InputSelectTypes = {
 export type InputProps = {
   name?: string
   defaultValue?: string
-  type?: React.HTMLInputTypeAttribute | "select"
+  type?: React.HTMLInputTypeAttribute | "select" | "switch"
   select?: InputSelectTypes
+  placeholder?: string
 }
 
-export type InputTypes = {
+export type InputTypes = ComponentTypes & {
   input: InputProps
 }

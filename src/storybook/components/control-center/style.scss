@@ -1,6 +1,6 @@
 @import "@size";
 
-.storybook-control-center {
+#storybook-control-center {
   background-color: rgb(var(--contrast-1));
   max-height: 40vh;
 
@@ -37,7 +37,7 @@
       padding: size(4) size(3);
     }
 
-    .input:not([type="radio"]) {
+    .input:not([type="radio"], [type="checkbox"]) {
       width: 50%;
     }
   }

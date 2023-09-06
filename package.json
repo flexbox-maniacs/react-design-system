@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "storybook": "vite",
     "dev": "tsc && vite",
     "host": "tsc && vite --host",
     "build": "tsc && vite build",

@@ -1,4 +1,4 @@
-.storybook {
+#storybook {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 5fr;
@@ -7,4 +7,10 @@
     "header header"
     "sidebar board"
     "sidebar controlCenter";
+}
+
+@function contrast-value($multiplier) {
+  @return calc(var(--body) + var(--contrast-variation) * $multiplier),
+    calc(var(--body) + var(--contrast-variation) * $multiplier),
+    calc(var(--body) + var(--contrast-variation) * $multiplier);
 }

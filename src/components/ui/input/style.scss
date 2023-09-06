@@ -1,35 +1,25 @@
 @import "@size";
 
+/* [class="input"] */
+
 .input {
   font-size: 14px;
   appearance: none;
-  border: 1px solid rgba(var(--text-color), 0.1);
+  border: 2px solid rgba(var(--text-color), 0.1);
   background-color: transparent;
   display: flex;
   text-align: left;
   padding: size(8);
   border-radius: calc(var(--radius) / 2);
 
-  &:focus:not([type="radio"]) {
-    border-color: rgba(var(--primary), 0.5);
-  }
-
-  &[type="radio"]:checked {
-    border-color: rgba(var(--primary), 0.5);
-
-    &::before {
-      background-color: rgb(var(--primary));
-      width: 10px;
-      aspect-ratio: 1;
-      border-radius: 100%;
-      content: "";
-      display: inline-flex;
-    }
-  }
-
   &::placeholder {
     opacity: 0.5;
     font-style: italic;
+  }
+
+  &:focus:not([type="radio"], [type="checkbox"]) {
+    border-color: rgba(var(--primary), 0.7);
+    background-color: rgb(var(--body));
   }
 
   &[type="radio"] {
@@ -42,6 +32,19 @@
 
     &:hover {
       cursor: pointer;
+    }
+
+    &:checked {
+      border-color: rgba(var(--primary), 0.5);
+
+      &::before {
+        background-color: rgb(var(--primary));
+        width: 10px;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        content: "";
+        display: inline-flex;
+      }
     }
   }
 
@@ -61,10 +64,48 @@
     }
   }
 
-  &.-select {
+  &.select {
     background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23b1b9c9' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
       right size(10) center;
     background-size: 8px;
     background-repeat: no-repeat;
+  }
+
+  &.switch {
+    padding: 0;
+    border-radius: calc(var(--radius) * 2);
+    aspect-ratio: 2;
+    height: 24px;
+    position: relative;
+    transition: 0.2s all ease-in-out;
+    border: none;
+    padding: 4px;
+    background: rgb(var(--contrast-3));
+
+    &::before {
+      content: "";
+      display: flex;
+      background-color: rgb(255, 255, 255);
+      border-radius: 100%;
+      border: 1px solid rgba(var(--contrast-2), 0.3);
+      aspect-ratio: 1;
+      height: 100%;
+      position: relative;
+      left: 0;
+      transition: 0.2s all ease-in-out;
+    }
+
+    &:checked {
+      background-color: rgb(var(--primary));
+
+      &::before {
+        left: calc(100%);
+        transform: translateX(-100%);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
