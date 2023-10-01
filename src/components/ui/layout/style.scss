@@ -1,0 +1,23 @@
+@import "@functions/size";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  row-gap: size(1);
+  margin: {
+    top: size(1);
+    bottom: size(1);
+  }
+
+  > .ui-container {
+    --container-display: flex;
+    --container-direction: column;
+    --container-align: center;
+    --container-text-align: center;
+    --container-row-gap: #{size(2)};
+  }
+
+  &-content > section:not(:last-child) {
+    margin-bottom: size(1);
+  }
+}
