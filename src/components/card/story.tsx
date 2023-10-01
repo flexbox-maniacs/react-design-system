@@ -1,8 +1,8 @@
-import UiCard from "."
+import Card from "."
 import { CardProps } from "./types"
 
 function CardStory(defaultProps: CardProps): JSX.Element {
-  return <UiCard card={defaultProps}>content</UiCard>
+  return <Card card={defaultProps}>content</Card>
 }
 
 export const defaults = {

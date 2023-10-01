@@ -1,8 +1,8 @@
-import UiIcon from "."
+import Icon from "."
 import { IconProps } from "./types"
 
 function IconStory(defaultProps: IconProps): JSX.Element {
-  return <UiIcon icon={defaultProps} />
+  return <Icon icon={defaultProps} />
 }
 
 export const defaults = {

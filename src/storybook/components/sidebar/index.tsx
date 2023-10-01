@@ -1,4 +1,4 @@
-import { UiButton } from "@ui"
+import { Button } from "@ds"
 import { StorybookSidebarTypes } from "./types"
 import "./style.scss"
 
@@ -7,7 +7,7 @@ function StorybookSidebar({ components, updateComponent }: StorybookSidebarTypes
     <aside id="storybook-sidebar">
       <div id="storybook-sidebar-wrapper">
         {components.map((item, index) => (
-          <UiButton
+          <Button
             button={{ label: item.name, variant: "transparent", size: "small" }}
             key={item.name}
             handleClick={() => updateComponent(index)}

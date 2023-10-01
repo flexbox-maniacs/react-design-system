@@ -2,7 +2,7 @@ import { useClassName } from "@scripts"
 import { TextStyleTypes } from "./types"
 import "./style.scss"
 
-function UiTextStyle({ style, className, children }: TextStyleTypes): JSX.Element {
+function TextStyle({ style, className, children }: TextStyleTypes): JSX.Element {
   const textStyleClassList = {
     uppercase: "uppercase",
     bold: "bold",
@@ -14,4 +14,4 @@ function UiTextStyle({ style, className, children }: TextStyleTypes): JSX.Elemen
   return <span className={textStyleClass}>{children}</span>
 }
 
-export default UiTextStyle
+export default TextStyle

@@ -2,7 +2,7 @@ import { useClassName } from "@scripts"
 import { TableTypes } from "./types"
 import "./style.scss"
 
-function UiTable({ table, className, children }: TableTypes): JSX.Element {
+function Table({ table, className, children }: TableTypes): JSX.Element {
   const tableClass = useClassName([className ?? null, "table"])
 
   return (
@@ -23,4 +23,4 @@ function UiTable({ table, className, children }: TableTypes): JSX.Element {
   )
 }
 
-export default UiTable
+export default Table

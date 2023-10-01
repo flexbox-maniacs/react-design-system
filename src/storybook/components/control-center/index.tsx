@@ -1,4 +1,4 @@
-import { UiTable, UiTableRow, UiTableCell, UiInput } from "@ui"
+import { Table, TableRow, TableCell, Input } from "@ds"
 import { StorybookControlCenterTypes } from "./types"
 import "./style.scss"
 
@@ -13,20 +13,20 @@ function StorybookControlCenter({ propList, onChangeForm, currentDefaults }: Sto
   return (
     <aside id="storybook-control-center">
       <form onChange={onChangeForm} id="storybook-control-center-form">
-        <UiTable
+        <Table
           table={{
             headers: ["prop", "value"],
           }}>
           <tbody>
             {propList.map((prop) => (
-              <UiTableRow key={prop.name}>
-                <UiTableCell>
+              <TableRow key={prop.name}>
+                <TableCell>
                   <label htmlFor={prop.name} id="storybook-control-center-label">
                     {prop.name}
                   </label>
-                </UiTableCell>
-                <UiTableCell>
-                  <UiInput
+                </TableCell>
+                <TableCell>
+                  <Input
                     input={{
                       name: prop.name,
                       defaultValue: currentDefaults[prop.name as keyof typeof currentDefaults],
@@ -35,11 +35,11 @@ function StorybookControlCenter({ propList, onChangeForm, currentDefaults }: Sto
                       placeholder: prop.type,
                     }}
                   />
-                </UiTableCell>
-              </UiTableRow>
+                </TableCell>
+              </TableRow>
             ))}
           </tbody>
-        </UiTable>
+        </Table>
       </form>
     </aside>
   )

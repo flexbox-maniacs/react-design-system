@@ -1,9 +1,9 @@
-import ButtonStory, { defaults as ButtonDefaults } from "./ui/button/story"
-import CardStory, { defaults as CardDefaults } from "./ui/card/story"
-import DialogStory, { defaults as DialogDefaults } from "./ui/dialog/story"
-import IconStory, { defaults as IconDefaults } from "./ui/icon/story"
-import InputStory, { defaults as InputDefaults } from "./ui/input/story"
-import TextStyleStory, { defaults as TextStyleDefaults } from "./ui/text-style/story"
+import ButtonStory, { defaults as ButtonDefaults } from "./button/story"
+import CardStory, { defaults as CardDefaults } from "./card/story"
+import DialogStory, { defaults as DialogDefaults } from "./dialog/story"
+import IconStory, { defaults as IconDefaults } from "./icon/story"
+import InputStory, { defaults as InputDefaults } from "./input/story"
+import TextStyleStory, { defaults as TextStyleDefaults } from "./text-style/story"
 
 export type PropTypes = { name: string; type: "string" | "option" | "boolean" | "number"; options?: Array<string> }
 

@@ -2,7 +2,7 @@ import { useClassName, throwError } from "@scripts"
 import { InputTypes } from "./types"
 import "./style.scss"
 
-function UiInput({ input, className }: InputTypes): JSX.Element {
+function Input({ input, className }: InputTypes): JSX.Element {
   const inputClass = useClassName([className ?? null, "input"])
   const selectClass = useClassName([className ?? null, "input", "select"])
   const switchClass = useClassName([className ?? null, "input", "switch"])
@@ -59,4 +59,4 @@ function UiInput({ input, className }: InputTypes): JSX.Element {
   } else return inputType.field
 }
 
-export default UiInput
+export default Input

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { changeTheme, getBrowserTheme } from "@scripts"
-import { UiButton } from "@ui"
+import { Button } from "@ds"
 import { StorybookHeaderTypes } from "./types"
 import "./style.scss"
 import StorybookLogo from "@images/storybook.svg"
@@ -21,7 +21,7 @@ function StorybookHeader({}: StorybookHeaderTypes): JSX.Element {
   return (
     <header id="storybook-header">
       <img src={StorybookLogo} alt="storybook logo" id="storybook-header-logo" />
-      <UiButton button={{ icon: icon, size: "small", variant: "transparent" }} handleClick={themeHandler} />
+      <Button button={{ icon: icon, size: "small", variant: "transparent" }} handleClick={themeHandler} />
     </header>
   )
 }

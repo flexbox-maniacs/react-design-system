@@ -18,14 +18,13 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "@dom-types": ["./src/components/dom-types.ts"],
-      "@images": ["./src/assets/images/*"],
-      "@mixins": ["./node_modules/theme-default/scss/mixins/*"],
       "@scripts": ["./node_modules/scripts/scripts.ts"],
-      "@sections": ["./src/components/sections/index.ts"],
+      "@mixins": ["./node_modules/theme-default/scss/mixins/*"],
       "@size": ["./node_modules/theme-default/scss/functions/_size.scss"],
       "@theme": ["./node_modules/theme-default/scss/main.scss"],
-      "@ui": ["./src/components/ui/index.ts"]
+      "@ds": ["./src/components/index.ts"],
+      "@dom-types": ["./src/components/dom-types.ts"],
+      "@images": ["./src/assets/images/*"]
     }
   },
   "include": ["src"],

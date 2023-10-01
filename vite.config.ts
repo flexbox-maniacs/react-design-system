@@ -8,14 +8,13 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@dom-types": path.resolve(__dirname, "./src/components/dom-types.ts"),
-      "@images": path.resolve(__dirname, "./src/assets/images"),
-      "@mixins": path.resolve(__dirname, "./node_modules/theme-default/scss/mixins"),
       "@scripts": path.resolve(__dirname, "./node_modules/scripts/scripts.ts"),
-      "@sections": path.resolve(__dirname, "./src/components/sections/index.ts"),
+      "@mixins": path.resolve(__dirname, "./node_modules/theme-default/scss/mixins"),
       "@size": path.resolve(__dirname, "./node_modules/theme-default/scss/functions/_size.scss"),
       "@theme": path.resolve(__dirname, "./node_modules/theme-default/scss/main.scss"),
-      "@ui": path.resolve(__dirname, "./src/components/ui/index.ts"),
+      "@ds": path.resolve(__dirname, "./src/components/index.ts"),
+      "@dom-types": path.resolve(__dirname, "./src/components/dom-types.ts"),
+      "@images": path.resolve(__dirname, "./src/assets/images"),
     },
   },
 })
