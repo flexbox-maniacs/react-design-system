@@ -17,15 +17,15 @@
     "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "@component": ["src/components/component-types.ts"],
-      "@images": ["src/assets/images/*"],
-      "@mixins": ["node_modules/theme-default/scss/mixins/*"],
-      "@scripts": ["node_modules/scripts/scripts.ts"],
-      "@sections": ["src/components/sections/index.ts"],
-      "@size": ["node_modules/theme-default/scss/functions/_size.scss"],
-      "@theme": ["node_modules/theme-default/scss/main.scss"],
-      "@ui": ["src/components/ui/index.ts"]
+      "@/*": ["./src/*"],
+      "@component": ["./src/components/component-types.ts"],
+      "@images": ["./src/assets/images/*"],
+      "@mixins": ["./node_modules/theme-default/scss/mixins/*"],
+      "@scripts": ["./node_modules/scripts/scripts.ts"],
+      "@sections": ["./src/components/sections/index.ts"],
+      "@size": ["./node_modules/theme-default/scss/functions/_size.scss"],
+      "@theme": ["./node_modules/theme-default/scss/main.scss"],
+      "@ui": ["./src/components/ui/index.ts"]
     }
   },
   "include": ["src"],
