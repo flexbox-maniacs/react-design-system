@@ -3,8 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "dependencies": {
-    "@flex/scripts": "github:flexbox-maniacs/scripts",
-    "@flex/theme-default": "github:flexbox-maniacs/theme-default"
-  }
+  "description": "react based design system",
+  "main": "index.ts",
+  "repository": "https://github.com/flexbox-maniacs/react-design-system.git",
+  "author": "vitor",
+  "license": "MIT"
 }
