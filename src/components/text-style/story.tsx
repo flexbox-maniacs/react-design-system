@@ -1,8 +1,8 @@
-import UiTextStyle from "."
+import TextStyle from "."
 import { TextStyleProps } from "./types"
 
 function TextStyleStory(defaultProps: TextStyleProps): JSX.Element {
-  return <UiTextStyle style={defaultProps}>text</UiTextStyle>
+  return <TextStyle style={defaultProps}>text</TextStyle>
 }
 
 export const defaults = {

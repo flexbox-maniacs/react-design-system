@@ -1,8 +1,8 @@
-import UiDialog from "."
+import Dialog from "."
 import { DialogProps } from "./types"
 
 function DialogStory(defaultProps: DialogProps): JSX.Element {
-  return <UiDialog dialog={defaultProps} />
+  return <Dialog dialog={defaultProps} />
 }
 
 export const defaults = {

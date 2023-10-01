@@ -1,7 +1,7 @@
 import { LayoutTypes } from "./types"
 import "./style.scss"
 
-function UiLayout({ page, children }: LayoutTypes): JSX.Element {
+function Layout({ page, children }: LayoutTypes): JSX.Element {
   return (
     <main id={page} className="layout">
       <div className="layout-content">{children}</div>
@@ -9,4 +9,4 @@ function UiLayout({ page, children }: LayoutTypes): JSX.Element {
   )
 }
 
-export default UiLayout
+export default Layout

@@ -1,8 +1,8 @@
-import UiButton from "."
+import Button from "."
 import { ButtonProps } from "./types"
 
 function ButtonStory(defaultProps: ButtonProps): JSX.Element {
-  return <UiButton button={defaultProps} />
+  return <Button button={defaultProps} />
 }
 
 export const defaults = {
