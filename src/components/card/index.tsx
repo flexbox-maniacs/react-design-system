@@ -1,5 +1,5 @@
 import { useClassName } from "@scripts"
-import { TextStyle } from "@ui"
+import { TextStyle } from "@ds"
 import { CardTypes } from "./types"
 import "./style.scss"
 

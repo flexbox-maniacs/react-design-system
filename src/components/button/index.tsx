@@ -1,5 +1,5 @@
 import { useClassName } from "@scripts"
-import { Icon } from "@ui"
+import { Icon } from "@ds"
 import { ButtonTypes } from "./types"
 import "./style.scss"
 
