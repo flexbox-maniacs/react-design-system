@@ -2,6 +2,6 @@ type HeaderProps = {
   logo: string
 }
 
-export type StorybookHeaderTypes = {
+export type HeaderTypes = {
   header: HeaderProps
 }
