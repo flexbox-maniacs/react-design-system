@@ -19,7 +19,7 @@ function Header({ header }: HeaderTypes): JSX.Element {
 
   return (
     <header id="header">
-      <img src={header.logo} alt="logo" class="header-logo" />
+      <img src={header.logo} alt="logo" className="header-logo" />
       <Button button={{ icon: icon, size: "small", variant: "transparent" }} handleClick={themeHandler} />
     </header>
   )
