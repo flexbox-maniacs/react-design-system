@@ -1,4 +1,4 @@
-import { ComponentTypes } from "@component"
+import { DomTypes } from "@dom-types"
 
 export type ButtonProps = {
   label?: string
@@ -11,7 +11,7 @@ export type ButtonProps = {
   submit?: boolean
 }
 
-export type ButtonTypes = ComponentTypes & {
+export type ButtonTypes = DomTypes & {
   button: ButtonProps
   handleClick?: React.MouseEventHandler
 }

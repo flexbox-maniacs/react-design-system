@@ -1,4 +1,4 @@
-import { ComponentTypes } from "@component"
+import { DomTypes } from "@dom-types"
 
 type InputSelectTypes = {
   name: string
@@ -13,6 +13,6 @@ export type InputProps = {
   placeholder?: string
 }
 
-export type InputTypes = ComponentTypes & {
+export type InputTypes = DomTypes & {
   input: InputProps
 }
