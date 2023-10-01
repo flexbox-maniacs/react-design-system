@@ -1,4 +1,4 @@
-import { ComponentTypes } from "@component"
+import { DomTypes } from "@dom-types"
 
 type CardHeaderProps = {
   title?: string
@@ -9,7 +9,7 @@ export type CardProps = {
   header: CardHeaderProps
 }
 
-export type CardTypes = ComponentTypes & {
+export type CardTypes = DomTypes & {
   children: React.ReactNode
   card?: CardProps
 }

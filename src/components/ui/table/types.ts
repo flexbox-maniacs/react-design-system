@@ -1,10 +1,10 @@
-import { ComponentTypes } from "@component"
+import { DomTypes } from "@dom-types"
 
 type TableProps = {
   headers?: Array<string>
 }
 
-export type TableTypes = ComponentTypes & {
+export type TableTypes = DomTypes & {
   table: TableProps
   children: React.ReactNode
 }

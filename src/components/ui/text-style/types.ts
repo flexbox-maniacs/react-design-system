@@ -1,4 +1,4 @@
-import { ComponentTypes } from "@component"
+import { DomTypes } from "@dom-types"
 
 export type TextStyleProps = {
   bold?: boolean
@@ -6,7 +6,7 @@ export type TextStyleProps = {
   muted?: boolean
 }
 
-export type TextStyleTypes = ComponentTypes & {
+export type TextStyleTypes = DomTypes & {
   style: TextStyleProps
   children: React.ReactNode
 }
