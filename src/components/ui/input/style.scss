@@ -80,23 +80,23 @@
     transition: 0.2s all ease-in-out;
     border: none;
     padding: 4px;
-    background: rgb(var(--contrast-3));
+    background-color: rgba(var(--primary), 0.1);
 
     &::before {
       content: "";
       display: flex;
-      background-color: rgb(255, 255, 255);
       border-radius: 100%;
-      border: 1px solid rgba(var(--contrast-2), 0.3);
       aspect-ratio: 1;
       height: 100%;
       position: relative;
       left: 0;
       transition: 0.2s all ease-in-out;
+      background-color: rgb(var(--primary));
+      border: 1px solid rgba(var(--contrast-1), 0.5);
     }
 
     &:checked {
-      background-color: rgb(var(--primary));
+      background-color: rgba(var(--primary), 0.5);
 
       &::before {
         left: calc(100%);

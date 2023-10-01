@@ -25,28 +25,16 @@ function Storybook(): JSX.Element {
     changeProps(props)
   }
 
-  function changeCss(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-
-    const form = e.target as HTMLFormElement
-
-    document.documentElement.setAttribute("style", form.css.value)
-  }
-
   return (
     <div id="storybook">
       <Header />
       <Sidebar components={components} updateComponent={updateComponent} />
-      {/* <Board component={components[currentComponent].story(defaultProps)} name={components[currentComponent].name} />
+      <Board component={components[currentComponent].story(defaultProps)} name={components[currentComponent].name} />
       <ControlCenter
         propList={components[currentComponent].propList}
         onChangeForm={updateProps}
         currentDefaults={components[currentComponent].defaults}
-      /> */}
-      {/* <form onSubmit={changeCss}>
-        <textarea name="css" id="" cols={30} rows={10}></textarea>
-        <UiButton button={{ label: "submit", submit: true }} />
-      </form> */}
+      />
     </div>
   )
 }

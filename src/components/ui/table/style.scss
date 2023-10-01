@@ -1,3 +1,36 @@
+@import "@size";
+
 .table {
   border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 0.9em;
+
+  &-header-group {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(var(--contrast-1));
+    box-shadow: var(--shadow);
+  }
+
+  &-header {
+    text-transform: uppercase;
+    text-align: start;
+    padding: size(6) size(4);
+  }
+
+  &-row {
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(var(--text-color), 0.1);
+    }
+  }
+
+  &-cell {
+    padding: size(6) size(4);
+  }
+
+  .input:not([type="radio"], [type="checkbox"]) {
+    width: 50%;
+  }
 }

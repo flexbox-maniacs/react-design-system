@@ -1,5 +1,6 @@
 import ButtonStory, { defaults as ButtonDefaults } from "./ui/button/story"
 import CardStory, { defaults as CardDefaults } from "./ui/card/story"
+import DialogStory, { defaults as DialogDefaults } from "./ui/dialog/story"
 import IconStory, { defaults as IconDefaults } from "./ui/icon/story"
 import InputStory, { defaults as InputDefaults } from "./ui/input/story"
 import TextStyleStory, { defaults as TextStyleDefaults } from "./ui/text-style/story"
@@ -28,6 +29,15 @@ export const components: Array<ComponentSettings> = [
     name: "Card",
     story: CardStory,
     defaults: CardDefaults,
+    propList: [
+      { name: "title", type: "string" },
+      { name: "subtitle", type: "string" },
+    ],
+  },
+  {
+    name: "Dialog",
+    story: DialogStory,
+    defaults: DialogDefaults,
     propList: [
       { name: "title", type: "string" },
       { name: "subtitle", type: "string" },
