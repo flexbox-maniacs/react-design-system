@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 import { changeTheme, getBrowserTheme } from "@scripts"
 import { Button } from "@ds"
 import { HeaderTypes } from "./types"
@@ -11,22 +11,14 @@ function Header({ header }: HeaderTypes): JSX.Element {
     changeTheme
     setIcon(changeTheme().icon)
   }
-  const headerRef = useRef<HTMLHeadElement>(null)
 
   useEffect(() => {
     getBrowserTheme
     setIcon(getBrowserTheme().icon)
-
-    setTimeout(() => {
-      if (headerRef.current) {
-        const height = headerRef.current.offsetHeight
-        sessionStorage.setItem("header-height", String(height))
-      }
-    }, 500)
   })
 
   return (
-    <header className="header" ref={headerRef}>
+    <header className="header">
       <img src={header.logo} alt="logo" className="header-logo" />
       <Button button={{ icon: icon, size: "small", variant: "transparent" }} handleClick={themeHandler} />
     </header>
