@@ -2,6 +2,7 @@ import { DomTypes } from "@dom-types"
 
 type TableProps = {
   headers?: Array<string>
+  prefix?: string
 }
 
 export type TableTypes = DomTypes & {

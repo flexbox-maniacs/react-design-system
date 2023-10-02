@@ -9,7 +9,8 @@ function Table({ table, className, children }: TableTypes): JSX.Element {
     <table className={tableClass}>
       {table.headers && (
         <thead className="table-header">
-          <tr className="table-header-group-row">
+          {table.prefix && <tr className="table-header-row -prefix">{table.prefix}</tr>}
+          <tr className="table-header-row">
             {table.headers.map((header) => (
               <th key={header} className="table-header-cell">
                 {header}
