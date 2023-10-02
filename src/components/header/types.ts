@@ -4,4 +4,5 @@ type HeaderProps = {
 
 export type HeaderTypes = {
   header: HeaderProps
+  headerHeight: any
 }
