@@ -8,7 +8,9 @@ function Table({ table, className, children }: TableTypes): JSX.Element {
   return (
     <table className={tableClass}>
       {table.headers && (
-        <thead className="table-header" style={{ top: sessionStorage.getItem("header-height") }}>
+        <thead
+          className="table-header"
+          style={sessionStorage.getItem("header-height") ? { top: sessionStorage.getItem("header-height") } : null}>
           <tr className="table-header-row">
             {table.prefix && <th className="table-header-cell -prefix">{table.prefix ?? " "}</th>}
             {table.headers.map((header) => (
