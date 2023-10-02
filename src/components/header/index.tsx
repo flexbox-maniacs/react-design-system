@@ -4,7 +4,7 @@ import { Button } from "@ds"
 import { HeaderTypes } from "./types"
 import "./style.scss"
 
-function Header({ header, headerHeight }: HeaderTypes): JSX.Element {
+function Header({ header }: HeaderTypes): JSX.Element {
   const [icon, setIcon] = useState("")
 
   function themeHandler() {
@@ -20,10 +20,10 @@ function Header({ header, headerHeight }: HeaderTypes): JSX.Element {
     setTimeout(() => {
       if (headerRef.current) {
         const height = headerRef.current.offsetHeight
-        headerHeight(height)
+        sessionStorage.setItem("header-height", height)
       }
     }, 500)
-  }, [headerHeight])
+  })
 
   return (
     <header className="header" ref={headerRef}>
