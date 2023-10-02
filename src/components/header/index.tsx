@@ -20,7 +20,7 @@ function Header({ header }: HeaderTypes): JSX.Element {
     setTimeout(() => {
       if (headerRef.current) {
         const height = headerRef.current.offsetHeight
-        sessionStorage.setItem("header-height", String(height))
+        sessionStorage.setItem("header-height", height)
       }
     }, 500)
   })
