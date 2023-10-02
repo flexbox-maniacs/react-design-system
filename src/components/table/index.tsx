@@ -7,7 +7,7 @@ function Table({ table, className, children }: TableTypes): JSX.Element {
 
   return (
     <table className={tableClass}>
-      {table.title && <h4 className="table-title">{header.title}</h4>}
+      {table.title && <h4 className="table-title">{table.title}</h4>}
       {table.headers && (
         <thead className="table-header">
           <tr className="table-header-row">
