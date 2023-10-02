@@ -12,16 +12,14 @@
     box-shadow: var(--shadow);
   }
 
-  &-header-row {
-    &.-prefix {
-      width: 0;
-    }
-  }
-
   &-header-cell {
     text-transform: uppercase;
     text-align: start;
     padding: size(6) size(4);
+
+    &.-prefix {
+      width: 0;
+    }
   }
 
   &-row {
