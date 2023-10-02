@@ -8,17 +8,17 @@ function Table({ table, className, children }: TableTypes): JSX.Element {
   return (
     <table className={tableClass}>
       {table.headers && (
-        <thead className="table-header-group">
+        <thead className="table-header">
           <tr className="table-header-group-row">
             {table.headers.map((header) => (
-              <th key={header} className="table-header">
+              <th key={header} className="table-header-cell">
                 {header}
               </th>
             ))}
           </tr>
         </thead>
       )}
-      {children}
+      <tbody className="table-body">{children}</tbody>
     </table>
   )
 }

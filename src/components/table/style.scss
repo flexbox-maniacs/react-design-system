@@ -6,7 +6,7 @@
   table-layout: fixed;
   font-size: 0.9em;
 
-  &-header-group {
+  &-header {
     position: sticky;
     top: 0;
     z-index: 1;
@@ -14,7 +14,7 @@
     box-shadow: var(--shadow);
   }
 
-  &-header {
+  &-header-cell {
     text-transform: uppercase;
     text-align: start;
     padding: size(6) size(4);
@@ -28,9 +28,5 @@
 
   &-cell {
     padding: size(6) size(4);
-  }
-
-  .input:not([type="radio"], [type="checkbox"]) {
-    width: 50%;
   }
 }
