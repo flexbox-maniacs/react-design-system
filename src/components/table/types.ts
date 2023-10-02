@@ -1,9 +1,9 @@
 import { DomTypes } from "@dom-types"
 
 type TableProps = {
+  caption?: string
   headers?: Array<string>
   prefix?: string | boolean
-  title?: string
 }
 
 export type TableTypes = DomTypes & {
