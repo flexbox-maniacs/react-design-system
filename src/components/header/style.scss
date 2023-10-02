@@ -6,7 +6,10 @@
   box-shadow: var(--shadow);
   padding: size(6) size(4);
   grid-area: header;
-  z-index: 3;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: rgb(var(--body));
 
   &-logo {
     width: clamp(20px, calc(2vw), 30px);
