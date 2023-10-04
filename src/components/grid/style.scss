@@ -3,7 +3,6 @@
 .grid {
   display: flex;
   column-gap: calc(var(--spacing, 5rem) / 2);
-  align-items: var(--grid-alignment, center);
 
   @include max($desktop) {
     flex-direction: column;
@@ -11,11 +10,15 @@
 
   &.align {
     &-start {
-      --grid-alignment: flex-start;
+      align-items: flex-start;
+    }
+
+    &-center {
+      align-items: center;
     }
 
     &-end {
-      --grid-alignment: flex-end;
+      align-items: flex-end;
     }
   }
 }
