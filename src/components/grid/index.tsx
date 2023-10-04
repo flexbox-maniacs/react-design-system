@@ -1,9 +1,9 @@
 import { useClassName } from "@scripts"
-import { GridTypes } from "./types"
+import { GridTypes, GridProps } from "./types"
 import "./style.scss"
 
-const defaultGrid = {
-  alignment: "center" as "center",
+const defaultGrid: GridProps = {
+  alignment: "center",
 }
 
 function Grid({ grid = defaultGrid, children }: GridTypes): JSX.Element {
