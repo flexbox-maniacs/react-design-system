@@ -1,12 +1,12 @@
 import { DomTypes } from "@dom-types"
 
 export type ButtonProps = {
+  style: "outlined" | "fill"
+  variant: "primary" | "transparent"
   label?: string
   startingIcon?: string
   icon?: string
   endingIcon?: string
-  variant?: "primary" | "transparent"
-  style?: "outlined" | "fill"
   size?: "small" | "large"
   submit?: boolean
 }

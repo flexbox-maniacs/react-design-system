@@ -1,19 +1,19 @@
 import { useClassName } from "@scripts"
 import { Icon } from "@ds"
-import { ButtonTypes } from "./types"
+import { ButtonTypes, ButtonProps } from "./types"
 import "./style.scss"
 
-function Button({ button, className, handleClick }: ButtonTypes): JSX.Element {
-  const { variant = "primary", style = "fill" } = button
+const defaultButton: ButtonProps = {
+  style: "fill",
+  variant: "primary",
+}
+
+function Button({ button = defaultButton, className, handleClick }: ButtonTypes): JSX.Element {
   const buttonClassList = {
     size: `size-${button.size}`,
   }
 
-  const buttonClass = useClassName(
-    [className ?? null, "button", variant != "transparent" ? style : null, variant],
-    button,
-    buttonClassList
-  )
+  const buttonClass = useClassName([className ?? null, "button"], button, buttonClassList)
 
   return (
     <button className={buttonClass} onClick={handleClick} type={button.submit ? "submit" : undefined}>

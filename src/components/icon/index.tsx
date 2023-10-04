@@ -1,11 +1,14 @@
 import { useClassName } from "@scripts"
-import { IconTypes } from "./types"
+import { IconTypes, IconProps } from "./types"
 import "./style.scss"
 
-function Icon({ icon }: IconTypes): JSX.Element {
-  const { type = "outlined" } = icon
+const iconDefault: IconProps = {
+  type: "outlined",
+  name: "face",
+}
 
-  const iconClass = useClassName(["icon", `material-icons-${type}`])
+function Icon({ icon = iconDefault }: IconTypes): JSX.Element {
+  const iconClass = useClassName(["icon", `material-icons-${icon.type}`])
 
   return <i className={iconClass}>{icon.name}</i>
 }
