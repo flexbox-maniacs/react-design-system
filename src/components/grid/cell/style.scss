@@ -5,17 +5,9 @@
     &.-size-#{$size} {
       flex-basis: calc(100% / (12 / $size));
     }
-
-    &.-lg-size-#{$size} {
-      flex-basis: calc(100% / (12 / $size));
-    }
-  }
-
-  &.-auto {
-    flex-basis: auto;
   }
 
   @include max($desktop) {
-    width: 100%;
+    flex-basis: 100%;
   }
 }

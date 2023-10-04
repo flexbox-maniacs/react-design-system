@@ -4,7 +4,6 @@ import "./style.scss"
 
 function Cell({ cell, children }: CellTypes): JSX.Element {
   const cellClassList = {
-    lg: "lg",
     size: "size",
   }
 
