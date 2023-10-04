@@ -6,7 +6,7 @@
 - scripts
 
 ## aliases:
-- `"@ds": ["./node_modules/{YOUR DS FOLDER}/src/index.ts"]`
+- `"@ds": ["./node_modules/{YOUR DS FOLDER}/src/components.ts"]`
 - `"@dom-types": ["./node_modules/{YOUR DS FOLDER}/src/components/dom-types.ts"]`
 - `"@scripts": ["./node_modules/{YOUR SCRIPTS FOLDER}/scripts.ts"]`
 - `"@mixins": ["./node_modules/{YOUR THEME FOLDER}/scss/mixins/*"]`
