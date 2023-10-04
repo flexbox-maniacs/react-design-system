@@ -6,9 +6,9 @@ export type ButtonProps = {
   icon?: string
   endingIcon?: string
   size?: "small" | "large"
-  style?: "outlined" | "fill"
+  style?: "outlined" | "fill" | "transparent"
   submit?: boolean
-  variant?: "primary" | "transparent"
+  variant?: "primary"
 }
 
 export type ButtonTypes = DomTypes & {
