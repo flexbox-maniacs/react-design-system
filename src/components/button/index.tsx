@@ -3,12 +3,9 @@ import { Icon } from "@ds"
 import { ButtonTypes, ButtonProps } from "./types"
 import "./style.scss"
 
-const defaultButton: ButtonProps = {
-  style: "fill",
-  variant: "primary",
-}
+function Button({ button, className, handleClick }: ButtonTypes): JSX.Element {
+  const { style = "fill", variant = "primary" }: ButtonProps = button
 
-function Button({ button = defaultButton, className, handleClick }: ButtonTypes): JSX.Element {
   const buttonClassList = {
     size: `size-${button.size}`,
   }
