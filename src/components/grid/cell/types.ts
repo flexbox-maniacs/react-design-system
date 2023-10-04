@@ -3,6 +3,6 @@ type CellProps = {
 }
 
 export type CellTypes = {
-  cell?: CellProps
+  cell: CellProps
   children: React.ReactNode
 }

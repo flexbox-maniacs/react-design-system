@@ -2,7 +2,7 @@
 
 .cell {
   @for $size from 1 through 12 {
-    &.-size-#{$size} {
+    &.size-#{$size} {
       flex-basis: calc(100% / (12 / $size));
     }
   }
