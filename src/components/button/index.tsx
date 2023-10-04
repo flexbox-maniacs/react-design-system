@@ -18,12 +18,12 @@ function Button({ button = defaultButton, className, handleClick }: ButtonTypes)
   return (
     <button className={buttonClass} onClick={handleClick} type={button.submit ? "submit" : undefined}>
       {button.startingIcon ? (
-        <Icon icon={{ name: button.startingIcon, type: button.iconType }} />
+        <Icon icon={{ name: button.startingIcon }} />
       ) : (
-        button.icon && <Icon icon={{ name: button.icon, type: button.iconType }} />
+        button.icon && <Icon icon={{ name: button.icon }} />
       )}
       {button.label && <span className="button-label">{button.label}</span>}
-      {button.endingIcon && <Icon icon={{ name: button.endingIcon, type: button.iconType }} />}
+      {button.endingIcon && <Icon icon={{ name: button.endingIcon }} />}
     </button>
   )
 }
