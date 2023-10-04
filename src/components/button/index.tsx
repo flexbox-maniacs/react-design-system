@@ -8,9 +8,11 @@ function Button({ button, className, handleClick }: ButtonTypes): JSX.Element {
 
   const buttonClassList = {
     size: `size-${button.size}`,
+    style: style,
+    variant: variant,
   }
 
-  const buttonClass = useClassName([className ?? null, "button", style, variant], button, buttonClassList)
+  const buttonClass = useClassName([className ?? null, "button"], button, buttonClassList)
 
   return (
     <button className={buttonClass} onClick={handleClick} type={button.submit ? "submit" : undefined}>

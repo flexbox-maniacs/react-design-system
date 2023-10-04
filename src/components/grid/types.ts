@@ -3,6 +3,6 @@ export type GridProps = {
 }
 
 export type GridTypes = {
-  grid?: GridProps
+  grid: GridProps
   children: React.ReactNode
 }
