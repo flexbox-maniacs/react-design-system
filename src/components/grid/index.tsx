@@ -2,10 +2,13 @@ import { useClassName } from "@scripts"
 import { GridTypes } from "./types"
 import "./style.scss"
 
-function Grid({ grid, children }: GridTypes): JSX.Element {
-  const { alignment = "center" } = grid
+const defaultGrid = {
+  alignment: "center" as "center",
+}
+
+function Grid({ grid = defaultGrid, children }: GridTypes): JSX.Element {
   const gridClassList = {
-    alignment: `align-${alignment}`,
+    alignment: `align-${grid?.alignment}`,
   }
 
   const gridClassName = useClassName(["grid"], grid, gridClassList)
