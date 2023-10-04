@@ -1,5 +1,5 @@
 type GridProps = {
-  alignment: "start" | "center" | "end"
+  alignment?: "start" | "center" | "end"
 }
 
 export type GridTypes = {
