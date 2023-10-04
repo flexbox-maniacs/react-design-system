@@ -2,8 +2,12 @@ import { useClassName } from "@scripts"
 import { GridTypes, GridProps } from "./types"
 import "./style.scss"
 
-function Grid({ grid, children }: GridTypes): JSX.Element {
-  const { alignment = "center" }: GridProps = grid || {}
+const gridDefault: GridProps = {
+  alignment: "center",
+}
+
+function Grid({ grid = gridDefault, children }: GridTypes): JSX.Element {
+  const { alignment = "center" }: GridProps = grid
   const gridClassList = {
     alignment: `align-${alignment}`,
   }
