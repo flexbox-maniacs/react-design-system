@@ -8,7 +8,7 @@ function Grid({ grid, children }: GridTypes): JSX.Element {
     alignment: `align-${alignment}`,
   }
 
-  const gridClassName = useClassName(["grid", alignment], grid, gridClassList)
+  const gridClassName = useClassName(["grid"], grid, gridClassList)
 
   return <div className={gridClassName}>{children}</div>
 }
