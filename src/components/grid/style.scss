@@ -21,4 +21,30 @@
       align-items: flex-end;
     }
   }
+
+  &.justify {
+    &-start {
+      justify-content: flex-start;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-end {
+      justify-content: flex-end;
+    }
+
+    &-space-between {
+      justify-content: space-between;
+    }
+
+    &-space-around {
+      justify-content: space-around;
+    }
+
+    &-space-evenly {
+      justify-content: space-evenly;
+    }
+  }
 }
