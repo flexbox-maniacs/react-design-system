@@ -4,12 +4,14 @@ import "./style.scss"
 
 const gridDefault: GridProps = {
   alignment: "center",
+  justify: "center",
 }
 
 function Grid({ grid = gridDefault, children }: GridTypes): JSX.Element {
-  const { alignment = "center" }: GridProps = grid
+  const { alignment = "center", justify = "center" }: GridProps = grid
   const gridClassList = {
     alignment: `align-${alignment}`,
+    justify: `justify-${justify}`,
   }
 
   const gridClassName = useClassName(["grid"], grid, gridClassList)
