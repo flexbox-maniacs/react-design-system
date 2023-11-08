@@ -1,0 +1,45 @@
+.checkbox {
+  appearance: none;
+  width: 1rem;
+  aspect-ratio: 1;
+  display: flex;
+  background: rgb(var(--contrast-3));
+  border-radius: calc(var(--radius) / 2);
+  cursor: pointer;
+  z-index: 1;
+
+  &:checked {
+    opacity: 0;
+  }
+
+  &:checked ~ &-check {
+    display: flex;
+  }
+
+  &-wrapper {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &-check {
+    display: none;
+    width: 1rem;
+    position: absolute;
+    justify-content: center;
+    aspect-ratio: 1;
+    background-color: rgb(var(--primary));
+    border-radius: calc(var(--radius) / 2);
+
+    &::after {
+      display: inherit;
+      content: "";
+      translate: 0 1px;
+      width: 6px;
+      height: 12px;
+      rotate: 42deg;
+      border: solid rgb(var(--contrast-3));
+      border-width: 0 3px 3px 0;
+    }
+  }
+}
