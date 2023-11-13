@@ -1,4 +1,5 @@
 import { DomTypes } from "@dom-types"
+import { InputTypes } from "../form/input-types"
 
 export type ButtonProps = {
   label?: string
@@ -11,7 +12,7 @@ export type ButtonProps = {
   variant?: "primary"
 }
 
-export type ButtonTypes = DomTypes & {
-  button: ButtonProps
-  handleClick?: React.MouseEventHandler
-}
+export type ButtonTypes = DomTypes &
+  InputTypes & {
+    button: ButtonProps
+  }
