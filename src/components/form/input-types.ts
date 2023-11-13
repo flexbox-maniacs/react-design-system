@@ -1,3 +1,3 @@
 export type InputTypes = {
-  onClick: React.MouseEventHandler
+  onClick?: React.MouseEventHandler
 }
