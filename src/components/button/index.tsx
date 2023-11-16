@@ -3,7 +3,7 @@ import { Icon } from "@ds"
 import { ButtonTypes, ButtonProps } from "./types"
 import "./style.scss"
 
-function Button({ button, className, handleClick }: ButtonTypes): JSX.Element {
+function Button({ button, className, onClick }: ButtonTypes): JSX.Element {
   const { style = "fill", variant = "primary" }: ButtonProps = button
 
   const buttonClassList = {
@@ -15,7 +15,7 @@ function Button({ button, className, handleClick }: ButtonTypes): JSX.Element {
   const buttonClass = useClassName([className ?? null, "button"], button, buttonClassList)
 
   return (
-    <button className={buttonClass} onClick={handleClick} type={button.submit ? "submit" : undefined}>
+    <button className={buttonClass} onClick={onClick} type={button.submit ? "submit" : undefined}>
       {button.startingIcon ? (
         <Icon icon={{ name: button.startingIcon }} />
       ) : (
