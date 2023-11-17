@@ -2,12 +2,12 @@
 
 .card {
   background-color: rgb(var(--contrast-1));
-  padding: size(6);
+  padding: size(4);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 
   &-header {
-    padding-bottom: size(6);
+    padding-bottom: size(4);
 
     &-title + &-subtitle {
       padding-top: size(16);
