@@ -1,5 +1,10 @@
 import { InputTypes } from "../input-types"
 
-export type FormCheckboxTypes = InputTypes & {
+type FormCheckboxProps = {
   name: string
+  defaultChecked?: boolean
+}
+
+export type FormCheckboxTypes = InputTypes & {
+  checkbox: FormCheckboxProps
 }
