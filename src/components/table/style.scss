@@ -4,6 +4,10 @@
   border-collapse: collapse;
   font-size: 0.9em;
 
+  &-caption {
+    margin-bottom: size(8);
+  }
+
   &-header {
     position: sticky;
     z-index: 1;
