@@ -2,13 +2,13 @@
 
 .card {
   background-color: rgb(var(--contrast-1));
-  display: flex;
-  justify-content: space-between;
   padding: size(4);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 
   &-header {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: size(4);
 
     &-title + &-subtitle {
