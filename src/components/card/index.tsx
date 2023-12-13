@@ -16,6 +16,7 @@ function Card({ card, id, children }: CardTypes): JSX.Element {
               {card.header.subtitle}
             </TextStyle>
           )}
+          {card.header.note && <small className="card-header-note">{card.header.note}</small>}
         </header>
       )}
       <div className="card-body">{children}</div>
