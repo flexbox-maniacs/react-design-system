@@ -9,10 +9,10 @@
   &-header {
     display: flex;
     justify-content: space-between;
-    padding-bottom: size(4);
+    margin-bottom: size(4);
 
     &-title + &-subtitle {
-      padding-top: size(16);
+      margin-top: size(16);
     }
 
     &-note {
