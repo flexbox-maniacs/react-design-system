@@ -3,6 +3,7 @@ import { DomTypes } from "@dom-types"
 type CardHeaderProps = {
   title?: string
   subtitle?: string
+  note?: string
 }
 
 export type CardProps = {
