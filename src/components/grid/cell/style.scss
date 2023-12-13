@@ -3,11 +3,11 @@
 .cell {
   @for $size from 1 through 12 {
     &.size-#{$size} {
-      flex-basis: calc(100% / (12 / $size));
+      max-width: calc(100% / (12 / $size));
     }
   }
 
   @include max($desktop) {
-    flex-basis: 100%;
+    max-width: 100%;
   }
 }
