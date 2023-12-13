@@ -10,7 +10,7 @@ function Card({ card, id, children }: CardTypes): JSX.Element {
     <div className={cardClass} id={id}>
       {card && card.header && card.header.title && (
         <header className="card-header">
-          <h4 className="card-header-title">{card.header.title}</h4>
+          <h2 className="card-header-title">{card.header.title}</h2>
           {card.header.subtitle && (
             <TextStyle style={{ muted: true }} className="card-header-subtitle">
               {card.header.subtitle}
