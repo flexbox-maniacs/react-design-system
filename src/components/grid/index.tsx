@@ -12,6 +12,7 @@ function Grid({ grid = gridDefault, children }: GridTypes): JSX.Element {
   const gridClassList = {
     alignment: `align-${alignment}`,
     justify: `justify-${justify}`,
+    vertical: grid.vertical,
   }
 
   const gridClassName = useClassName(["grid"], grid, gridClassList)
