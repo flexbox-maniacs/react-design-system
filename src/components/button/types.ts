@@ -9,7 +9,7 @@ export type ButtonProps = {
   size?: "small" | "large"
   style?: "outlined" | "fill" | "transparent"
   submit?: boolean
-  variant?: "primary"
+  variant?: "primary" | "info" | "warning" | "success" | "danger"
 }
 
 export type ButtonTypes = DomTypes &

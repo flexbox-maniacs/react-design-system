@@ -1,5 +1,5 @@
 import { useClassName } from "@scripts"
-import { Icon } from "@ds"
+import Icon from "../icon"
 import { ButtonTypes, ButtonProps } from "./types"
 import "./style.scss"
 
@@ -12,7 +12,7 @@ function Button({ button, className, onClick }: ButtonTypes): JSX.Element {
     variant: variant,
   }
 
-  const buttonClass = useClassName([className ?? null, "button"], button, buttonClassList)
+  const buttonClass = useClassName("button", button, buttonClassList, className)
 
   return (
     <button className={buttonClass} onClick={onClick} type={button.submit ? "submit" : undefined}>

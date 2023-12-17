@@ -6,7 +6,7 @@
   padding: 0.7em;
   background-color: var(--button-background);
   border: {
-    radius: 6px;
+    radius: var(--border-radius-default);
     width: 1px;
     color: var(--button-border-color, transparent);
     style: solid;
@@ -18,28 +18,28 @@
 
   &.primary {
     &.fill {
-      --button-background: rgba(var(--primary), 0.9);
-      --button-color: rgb(var(--body));
+      --button-background: rgba(var(--color-variant-primary), 0.9);
+      --button-color: rgb(var(--color-background));
 
       &:hover {
-        --button-background: rgba(var(--primary), 0.7);
+        --button-background: rgba(var(--color-variant-primary), 0.7);
       }
     }
 
     &.outlined {
-      --button-border-color: rgba(var(--primary), 0.9);
+      --button-border-color: rgba(var(--color-variant-primary), 0.9);
 
       &:hover {
-        --button-background: rgb(var(--primary), 0.9);
-        --button-color: rgb(var(--body));
+        --button-background: rgb(var(--color-variant-primary), 0.9);
+        --button-color: rgb(var(--color-background));
       }
     }
   }
 
   &.transparent {
     &:hover {
-      --button-background: rgba(var(--primary), 0.9);
-      --button-color: rgb(var(--body));
+      --button-background: rgba(var(--color-variant-primary), 0.9);
+      --button-color: rgb(var(--color-background));
     }
   }
 
