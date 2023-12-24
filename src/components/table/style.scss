@@ -5,7 +5,7 @@
   font-size: 0.9em;
 
   &-caption {
-    margin-bottom: size(8);
+    margin-bottom: spacing(8);
   }
 
   &-header {
@@ -18,7 +18,7 @@
   &-header-cell {
     text-transform: uppercase;
     text-align: start;
-    padding: size(6) size(4);
+    padding: spacing(6) spacing(4);
 
     &.-prefix {
       width: 0;
@@ -32,6 +32,6 @@
   }
 
   &-cell {
-    padding: size(6) size(4);
+    padding: spacing(6) spacing(4);
   }
 }

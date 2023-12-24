@@ -9,7 +9,7 @@
   background-color: transparent;
   display: flex;
   text-align: left;
-  padding: size(8);
+  padding: spacing(8);
   border-radius: calc(var(--radius) / 2);
 
   &::placeholder {
@@ -56,17 +56,17 @@
 
   &-label {
     display: flex;
-    column-gap: size(8);
+    column-gap: spacing(8);
     align-items: center;
 
     & + .input-label {
-      margin-top: size(8);
+      margin-top: spacing(8);
     }
   }
 
   &.select {
     background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23b1b9c9' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-      right size(10) center;
+      right spacing(10) center;
     background-size: 8px;
     background-repeat: no-repeat;
   }

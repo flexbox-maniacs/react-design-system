@@ -2,7 +2,7 @@
 
 .button {
   display: inline-flex;
-  column-gap: 5px;
+  column-gap: spacing(10);
   padding: 0.7em;
   background-color: var(--button-background);
   border: {
