@@ -1,46 +1,17 @@
 @import "@spacing";
 
 .button {
+  --button-variant: unset;
+
   display: inline-flex;
-  column-gap: spacing(10);
+  column-gap: spacing(12);
   padding: 0.7em;
-  background-color: var(--button-background);
-  border: {
-    radius: var(--border-radius-default);
-    width: 1px;
-    color: var(--button-border-color, transparent);
-    style: solid;
-  }
+  background-color: var(--button-background, none);
+  border-radius: var(--border-radius-default);
+  transition: var(--transition-default) background-color;
 
   &:hover {
     cursor: pointer;
-  }
-
-  &.primary {
-    &.fill {
-      --button-background: rgba(var(--color-variant-primary), 0.9);
-      --button-color: rgb(var(--color-background));
-
-      &:hover {
-        --button-background: rgba(var(--color-variant-primary), 0.7);
-      }
-    }
-
-    &.outlined {
-      --button-border-color: rgba(var(--color-variant-primary), 0.9);
-
-      &:hover {
-        --button-background: rgb(var(--color-variant-primary), 0.9);
-        --button-color: rgb(var(--color-background));
-      }
-    }
-  }
-
-  &.transparent {
-    &:hover {
-      --button-background: rgba(var(--color-variant-primary), 0.9);
-      --button-color: rgb(var(--color-background));
-    }
   }
 
   &.size {
@@ -53,7 +24,53 @@
     }
   }
 
-  > * {
-    color: var(--button-color);
+  &.style {
+    &-filled {
+      --button-background: rgb(var(--button-variant));
+
+      &:hover {
+        --button-background: rgba(var(--button-variant), 0.7);
+      }
+    }
+
+    &-outlined {
+      border: {
+        color: rgb(var(--button-variant));
+        style: solid;
+        width: 1px;
+      }
+
+      &:hover {
+        --button-background: rgb(var(--button-variant));
+      }
+    }
+
+    &-transparent {
+      &:hover {
+        --button-background: rgba(var(--button-variant), 0.2);
+      }
+    }
+  }
+
+  &.variant {
+    &-primary {
+      --button-variant: var(--color-primary);
+    }
+
+    &-info {
+      --button-variant: var(--color-info);
+    }
+
+    &-warning {
+      --button-variant: var(--color-warning);
+    }
+
+    &-success {
+      --button-variant: var(--color-success);
+    }
+
+    &-danger {
+      --button-variant: var(--color-danger);
+    }
   }
 }

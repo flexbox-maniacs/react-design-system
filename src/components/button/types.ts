@@ -7,7 +7,7 @@ export type ButtonProps = {
   icon?: string
   endingIcon?: string
   size?: "small" | "large"
-  style?: "outlined" | "fill" | "transparent"
+  style?: "filled" | "outlined" | "transparent"
   submit?: boolean
   variant?: "primary" | "info" | "warning" | "success" | "danger"
 }
