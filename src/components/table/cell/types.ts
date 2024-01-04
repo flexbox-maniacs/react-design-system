@@ -5,5 +5,5 @@ type CellProps = {
 
 export type TableCellTypes = {
   cell?: CellProps
-  children: React.ReactNode
+  children?: React.ReactNode
 }
