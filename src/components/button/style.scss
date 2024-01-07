@@ -2,12 +2,9 @@
 @import "../../scss/default-variants";
 
 .button {
-  --button-variant: unset;
-
   display: inline-flex;
   column-gap: size(12);
   padding: 0.6em 0.8em;
-  background-color: var(--button-background, none);
   border-radius: var(--border-radius-default);
   transition: var(--transition-default) background-color;
 
@@ -35,10 +32,10 @@
 
   &.style {
     &-filled {
-      --button-background: rgb(var(--button-variant));
+      background-color: rgb(var(--button-variant));
 
       &:hover {
-        --button-background: rgba(var(--button-variant), 0.7);
+        background-color: rgba(var(--button-variant), 0.7);
       }
     }
 
@@ -50,13 +47,13 @@
       }
 
       &:hover {
-        --button-background: rgb(var(--button-variant));
+        background-color: rgb(var(--button-variant));
       }
     }
 
     &-transparent {
       &:hover {
-        --button-background: rgba(var(--button-variant), 0.2);
+        background-color: rgba(var(--button-variant), 0.2);
       }
     }
   }
