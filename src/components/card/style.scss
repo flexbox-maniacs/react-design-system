@@ -1,9 +1,9 @@
 @import "@spacing";
 
 .card {
-  background-color: rgb(var(--contrast-1));
+  background-color: rgb(var(--color-background-contrast-1));
   padding: spacing(4);
-  border-radius: var(--radius);
+  border-radius: var(--border-radius-default);
   box-shadow: var(--shadow);
 
   &-header {
@@ -16,7 +16,7 @@
     }
 
     &-note {
-      color: var(--muted);
+      color: var(--color-muted);
     }
   }
 }

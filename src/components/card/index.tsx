@@ -1,10 +1,10 @@
 import { useClassName } from "@scripts"
-import { TextStyle } from "@ds"
+import TextStyle from "../text-style"
 import { CardTypes } from "./types"
 import "./style.scss"
 
 function Card({ card, id, children }: CardTypes): JSX.Element {
-  const cardClass = useClassName(["card"])
+  const cardClass = useClassName("card")
 
   return (
     <div className={cardClass} id={id}>
