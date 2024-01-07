@@ -8,8 +8,8 @@
 ## aliases:
 
 - `"@ds": ["./node_modules/{YOUR DS FOLDER}/src/components.ts"]`
-- `"@dom-types": ["./node_modules/{YOUR DS FOLDER}/src/components/dom-types.ts"]` (optional)
 - `"@scripts": ["./node_modules/{YOUR SCRIPTS FOLDER}/scripts.ts"]`
+- `"@dom-types": ["./node_modules/{YOUR DS FOLDER}/src/components/dom-types.ts"]` (optional)
 
 ## general configuration
 
