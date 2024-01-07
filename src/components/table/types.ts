@@ -1,4 +1,4 @@
-import { DomTypes } from "@dom-types"
+import { DomTypes } from "../../types/dom-types"
 
 type TableProps = {
   caption?: string

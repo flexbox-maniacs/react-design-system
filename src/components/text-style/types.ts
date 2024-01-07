@@ -1,4 +1,4 @@
-import { DomTypes } from "@dom-types"
+import { DomTypes } from "../../types/dom-types"
 
 export type TextStyleProps = {
   bold?: boolean

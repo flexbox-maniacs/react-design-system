@@ -1,4 +1,4 @@
-import { DomTypes } from "@dom-types"
+import { DomTypes } from "../../types/dom-types"
 import { InputTypes } from "../form/input-types"
 import { DefaultVariants } from "../../types/variants"
 
