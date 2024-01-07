@@ -1,10 +1,10 @@
-@import "@spacing";
+@import "../../scss/functions/size";
 
 .header {
   display: flex;
   justify-content: space-between;
   box-shadow: var(--shadow);
-  padding: spacing(6) spacing(4);
+  padding: size(6) size(4);
   grid-area: header;
   z-index: 2;
   position: sticky;

@@ -1,18 +1,18 @@
-@import "@spacing";
+@import "../../scss/functions/size";
 
 .card {
   background-color: rgb(var(--color-background-contrast-1));
-  padding: spacing(4);
+  padding: size(4);
   border-radius: var(--border-radius-default);
   box-shadow: var(--shadow);
 
   &-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: spacing(4);
+    margin-bottom: size(4);
 
     &-title + &-subtitle {
-      margin-top: spacing(16);
+      margin-top: size(16);
     }
 
     &-note {

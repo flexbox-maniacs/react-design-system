@@ -6,11 +6,13 @@ type CardHeaderProps = {
   note?: string
 }
 
-export type CardProps = {
+type CardProps = {
   header: CardHeaderProps
 }
 
-export type CardTypes = DomTypes & {
+type CardTypes = DomTypes & {
   children: React.ReactNode
   card?: CardProps
 }
+
+export { type CardTypes, type CardProps }

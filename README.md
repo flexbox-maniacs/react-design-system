@@ -3,18 +3,13 @@
 ## dependencies:
 
 - sass
-- theme-default
-- scripts
+- scripts project
 
 ## aliases:
 
 - `"@ds": ["./node_modules/{YOUR DS FOLDER}/src/components.ts"]`
 - `"@dom-types": ["./node_modules/{YOUR DS FOLDER}/src/components/dom-types.ts"]`
 - `"@scripts": ["./node_modules/{YOUR SCRIPTS FOLDER}/scripts.ts"]`
-- `"@mixins": ["./node_modules/{YOUR THEME FOLDER}/scss/mixins/*"]`
-- `"@spacing": ["./node_modules/{YOUR THEME FOLDER}/scss/functions/_spacing.scss"]`
-- `"@theme": ["./node_modules/{YOUR THEME FOLDER}/scss/main.scss"]`
-- `"@breakpoints": ["./node_modules/{YOUR THEME FOLDER}/scss/mixins/breakpoints.scss"],`
 
 ## general configuration
 

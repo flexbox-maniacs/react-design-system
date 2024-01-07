@@ -1,11 +1,11 @@
-@import "@spacing";
+@import "../../scss/functions/size";
 
 .table {
   border-collapse: collapse;
   font-size: 0.9em;
 
   &-caption {
-    margin-bottom: spacing(8);
+    margin-bottom: size(8);
   }
 
   &-header {
@@ -18,7 +18,7 @@
   &-header-cell {
     text-transform: uppercase;
     text-align: start;
-    padding: spacing(6) spacing(4);
+    padding: size(6) size(4);
 
     &.-prefix {
       width: 0;
@@ -32,6 +32,6 @@
   }
 
   &-cell {
-    padding: spacing(6) spacing(4);
+    padding: size(6) size(4);
   }
 }
