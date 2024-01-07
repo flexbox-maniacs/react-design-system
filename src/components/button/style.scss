@@ -1,17 +1,26 @@
 @import "@spacing";
+@import "../../scss/default-variants";
 
 .button {
   --button-variant: unset;
 
   display: inline-flex;
   column-gap: spacing(12);
-  padding: 0.7em;
+  padding: 0.6em 0.8em;
   background-color: var(--button-background, none);
   border-radius: var(--border-radius-default);
   transition: var(--transition-default) background-color;
 
   &:hover {
     cursor: pointer;
+  }
+
+  &.variant {
+    @each $variant in $default-variants {
+      &-#{$variant} {
+        --button-variant: var(--color-#{$variant});
+      }
+    }
   }
 
   &.size {
@@ -49,28 +58,6 @@
       &:hover {
         --button-background: rgba(var(--button-variant), 0.2);
       }
-    }
-  }
-
-  &.variant {
-    &-primary {
-      --button-variant: var(--color-primary);
-    }
-
-    &-info {
-      --button-variant: var(--color-info);
-    }
-
-    &-warning {
-      --button-variant: var(--color-warning);
-    }
-
-    &-success {
-      --button-variant: var(--color-success);
-    }
-
-    &-danger {
-      --button-variant: var(--color-danger);
     }
   }
 }

@@ -1,18 +1,21 @@
 import { DomTypes } from "@dom-types"
 import { InputTypes } from "../form/input-types"
+import { DefaultVariants } from "../../types/variants"
 
-export type ButtonProps = {
+type ButtonProps = {
   label?: string
   startingIcon?: string
   icon?: string
   endingIcon?: string
-  size?: "small" | "large"
+  size?: DefaultSize
   style?: "filled" | "outlined" | "transparent"
   submit?: boolean
-  variant?: "primary" | "info" | "warning" | "success" | "danger"
+  variant?: DefaultVariants
 }
 
-export type ButtonTypes = DomTypes &
+type ButtonTypes = DomTypes &
   InputTypes & {
     button: ButtonProps
   }
+
+export { type ButtonTypes, type ButtonProps }
