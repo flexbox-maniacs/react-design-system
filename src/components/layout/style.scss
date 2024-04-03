@@ -1,23 +1,23 @@
-@import "../../scss/functions/size";
+@import "@functions/section";
 
 .layout {
   display: flex;
   flex-direction: column;
-  row-gap: size(1);
+  row-gap: section(1);
   margin: {
-    top: size(1);
-    bottom: size(1);
+    bottom: section(1);
+    top: section(1);
   }
 
-  .ui-container {
-    --container-display: flex;
-    --container-direction: column;
+  .container {
     --container-align: center;
+    --container-direction: column;
+    --container-display: flex;
+    --container-row-gap: #{section(2)};
     --container-text-align: center;
-    --container-row-gap: #{size(2)};
   }
 
   &-content > section:not(:last-child) {
-    margin-bottom: size(1);
+    margin-bottom: section(1);
   }
 }

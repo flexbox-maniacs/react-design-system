@@ -1,16 +1,14 @@
-import { DomTypes } from "../../types/dom-types"
-
 type CardHeaderProps = {
-  title?: string
-  subtitle?: string
   note?: string
+  subtitle?: string
+  title?: string
 }
 
 type CardProps = {
   header: CardHeaderProps
 }
 
-type CardTypes = DomTypes & {
+type CardTypes = {
   children: React.ReactNode
   card?: CardProps
 }

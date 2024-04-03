@@ -1,37 +1,27 @@
-@import "../../scss/functions/size";
+@import "@functions/section";
 
 .table {
   border-collapse: collapse;
   font-size: 0.9em;
 
   &-caption {
-    margin-bottom: size(8);
+    margin-bottom: section(8);
   }
 
   &-header {
-    position: sticky;
-    z-index: 1;
     background-color: inherit;
     box-shadow: var(--shadow);
+    position: sticky;
+    z-index: 1;
   }
 
   &-header-cell {
-    text-transform: uppercase;
+    padding: section(6) section(4);
     text-align: start;
-    padding: size(6) size(4);
+    text-transform: uppercase;
 
     &.-prefix {
       width: 0;
     }
-  }
-
-  &-row {
-    &:not(:last-child) {
-      border-bottom: 1px solid rgba(var(--text-color), 0.1);
-    }
-  }
-
-  &-cell {
-    padding: size(6) size(4);
   }
 }

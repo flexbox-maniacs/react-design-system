@@ -1,8 +1,9 @@
 import { TableCellTypes } from "./types"
+import "./style.scss"
 
 function TableCell({ cell, children }: TableCellTypes): JSX.Element {
   return (
-    <td className="table-cell" colSpan={cell?.colspan} rowSpan={cell?.rowspan}>
+    <td className="table-cell" colSpan={cell?.colSpan} rowSpan={cell?.rowSpan}>
       {children}
     </td>
   )

@@ -1,12 +1,11 @@
-@import "../../scss/functions/size";
+@import "@functions/section";
 @import "../../scss/default-variants";
 
 .button {
-  display: inline-flex;
-  column-gap: size(12);
-  padding: 0.6em 0.8em;
   border-radius: var(--border-radius-default);
-  transition: var(--transition-default) background-color;
+  column-gap: section(12);
+  display: inline-flex;
+  padding: 0.6em 0.8em;
 
   &:hover {
     cursor: pointer;
@@ -53,7 +52,7 @@
 
     &-transparent {
       &:hover {
-        background-color: rgba(var(--button-variant), 0.2);
+        background-color: rgba(var(--button-variant), 0.7);
       }
     }
   }

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
-import { changeTheme, getBrowserTheme } from "@scripts"
+import { useClassName, changeTheme, getBrowserTheme } from "@scripts"
 import { Button } from "@ds"
 import { HeaderTypes } from "./types"
 import "./style.scss"
 
 function Header({ header }: HeaderTypes): JSX.Element {
+  const headerClass = useClassName("header")
+
   const [icon, setIcon] = useState("")
 
   function themeHandler() {
@@ -18,7 +20,7 @@ function Header({ header }: HeaderTypes): JSX.Element {
   })
 
   return (
-    <header className="header">
+    <header className={headerClass}>
       <img src={header.logo} alt="logo" className="header-logo" />
       <Button button={{ icon: icon, size: "small", style: "transparent" }} onClick={themeHandler} />
     </header>

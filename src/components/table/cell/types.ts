@@ -1,6 +1,6 @@
 type CellProps = {
-  colspan?: number
-  rowspan?: number
+  colSpan?: number
+  rowSpan?: number
 }
 
 export type TableCellTypes = {

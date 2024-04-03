@@ -1,26 +1,22 @@
-@import "../../scss/functions/size";
+@import "@functions/section";
 
 .container {
-  max-width: 1140px;
+  max-width: min(90vw, var(--size-container-default));
   margin: {
     left: auto;
     right: auto;
   }
-  padding: {
-    left: 20px;
-    right: 20px;
-  }
 
   &-wrapper {
-    display: var(--container-display, block);
     align-items: var(--container-align-items);
-    justify-content: var(--container-justify-content);
-    justify-items: var(--container-justify-items);
-    flex-direction: var(--container-direction);
-    text-align: var(--container-text-align);
     column-gap: var(--container-column-gap, var(--container-gap));
-    row-gap: var(--container-row-gap, var(--container-gap));
+    display: var(--container-display, block);
+    flex-direction: var(--container-direction);
     grid-template-columns: var(--container-grid-columns);
     grid-template-rows: var(--container-grid-rows);
+    justify-content: var(--container-justify-content);
+    justify-items: var(--container-justify-items);
+    row-gap: var(--container-row-gap, var(--container-gap));
+    text-align: var(--container-text-align);
   }
 }

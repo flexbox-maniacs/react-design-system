@@ -3,21 +3,23 @@ import TextStyle from "../text-style"
 import { CardTypes } from "./types"
 import "./style.scss"
 
-function Card({ card, id, children }: CardTypes): JSX.Element {
+function Card({ card, children }: CardTypes): JSX.Element {
   const cardClass = useClassName("card")
 
   return (
-    <div className={cardClass} id={id}>
+    <div className={cardClass}>
       {card && card.header && card.header.title && (
-        <header className="card-header">
-          <h2 className="card-header-title">{card.header.title}</h2>
-          {card.header.subtitle && (
-            <TextStyle style={{ muted: true }} className="card-header-subtitle">
-              {card.header.subtitle}
-            </TextStyle>
+        <div className="card-header">
+          <div className="card-header-title-group">
+            <h2 className="card-header-title">{card.header.title}</h2>
+            {card.header.subtitle && <TextStyle style={{ muted: true }} children={card.header.subtitle} />}
+          </div>
+          {card.header.note && (
+            <small className="card-header-note">
+              <TextStyle style={{ muted: true }} children={card.header.note} />
+            </small>
           )}
-          {card.header.note && <small className="card-header-note">{card.header.note}</small>}
-        </header>
+        </div>
       )}
       <div className="card-body">{children}</div>
     </div>

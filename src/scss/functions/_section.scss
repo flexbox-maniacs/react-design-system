@@ -1,0 +1,14 @@
+$spacing-unit: 4px;
+
+@function section($value, $operation: "divide") {
+  @if $operation == "divide" {
+    @return calc((($spacing-unit * 12) + 2vw) / $value);
+  }
+
+  @if $operation == "multiply" {
+    @return calc((($spacing-unit * 12) + 2vw) * $value);
+  }
+
+  @error "Parameter $operation must be 'divide' or 'multiply'.";
+  @return null;
+}

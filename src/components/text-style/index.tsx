@@ -2,14 +2,14 @@ import { useClassName } from "@scripts"
 import { TextStyleTypes } from "./types"
 import "./style.scss"
 
-function TextStyle({ style, className, children }: TextStyleTypes): JSX.Element {
+function TextStyle({ style, children }: TextStyleTypes): JSX.Element {
   const textStyleClassList = {
     uppercase: "uppercase",
     bold: "bold",
     muted: "muted",
   }
 
-  const textStyleClass = useClassName([className ?? null, "text-style"], style, textStyleClassList)
+  const textStyleClass = useClassName("text-style", textStyleClassList, style)
 
   return <span className={textStyleClass}>{children}</span>
 }

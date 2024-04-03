@@ -2,8 +2,8 @@ import { useClassName } from "@scripts"
 import { TableTypes } from "./types"
 import "./style.scss"
 
-function Table({ table, className, children }: TableTypes): JSX.Element {
-  const tableClass = useClassName([className ?? null, "table"])
+function Table({ table, children }: TableTypes): JSX.Element {
+  const tableClass = useClassName("table")
 
   return (
     <table className={tableClass}>

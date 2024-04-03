@@ -1,17 +1,16 @@
-@import "../../scss/functions/size";
+@import "@functions/section";
 
 .header {
+  background-color: rgb(var(--color-background));
+  box-shadow: var(--shadow-default);
   display: flex;
   justify-content: space-between;
-  box-shadow: var(--shadow);
-  padding: size(6) size(4);
-  grid-area: header;
-  z-index: 2;
+  padding: section(6) section(4);
   position: sticky;
   top: 0;
-  background-color: rgb(var(--body));
+  z-index: 2;
 
   &-logo {
-    width: clamp(20px, calc(2vw), 30px);
+    width: clamp(section(4), 2vw, section(2));
   }
 }

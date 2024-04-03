@@ -1,22 +1,22 @@
-@import "../../scss/functions/size";
+@import "@functions/section";
 
 .card {
   background-color: rgb(var(--color-background-contrast-1));
-  padding: size(4);
   border-radius: var(--border-radius-default);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-default);
+  padding: section(3);
 
   &-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: size(4);
+    margin-bottom: section(4);
 
-    &-title + &-subtitle {
-      margin-top: size(16);
+    &-title-group {
+      text-align: left;
     }
 
-    &-note {
-      color: var(--color-muted);
+    &-title + &-subtitle {
+      margin-top: section(16);
     }
   }
 }

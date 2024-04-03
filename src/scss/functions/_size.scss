@@ -1,3 +1,0 @@
-@function size($divisor) {
-  @return calc(var(--spacing-default) / $divisor);
-}
