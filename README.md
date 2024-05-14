@@ -17,8 +17,8 @@
 (`import * as path from "path"`)
 
 - `"@ds": path.resolve(__dirname, "./node_modules/{YOUR DS FOLDER}/src/components.ts")`
-- `"@scripts": path.resolve(__dirname, "./node_modules/{YOUR DEPENDENCIES FOLDER}/scripts.ts")`
 - `"@mixins": path.resolve(__dirname, "./node_modules/{YOUR DEPENDENCIES FOLDER}/mixins")`
+- `"@scripts": path.resolve(__dirname, "./node_modules/{YOUR DEPENDENCIES FOLDER}/scripts.ts")`
 - `"@dom-types": path.resolve(__dirname, "./node_modules/{YOUR DS FOLDER}/src/components/dom-types.ts")` (optional)
 
 ## general configuration
